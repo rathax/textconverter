@@ -1,0 +1,48 @@
+{
+  "title": "Unicode-Textkonverter, der in <br> Facebook, WhatsApp, Twitter(X) und vielem mehr funktioniert.",
+  "subTitle": "Diese App konvertiert Zeichen aus dem ASCII-Bereich. Zeichen werden eins zu eins umgewandelt.",
+  "faq1": {
+    "question": "Was ist der Zweck dieses Unicode-Textkonversions-Web-Apps?",
+    "answer": "Die Web-App ist darauf ausgelegt, regulären Text in Unicode-Zeichen umzuwandeln und Benutzern eine kreative und visuell ansprechende Möglichkeit zu bieten, sich auf verschiedenen Plattformen auszudrücken. Egal, ob Sie einen Social-Media-Beitrag verfassen, eine Website gestalten oder Ihren Nachrichten eine persönliche Note hinzufügen."
+  },
+  "faq2": {
+    "question": "Wie funktioniert die Unicode-Textkonversion?",
+    "answer": "Die App verwendet Algorithmen, um Standardzeichen ihren entsprechenden Unicode-Gegenstücken zuzuordnen. Diese Unicode-Zeichen haben oft einzigartige Stile, wodurch der konvertierte Text schicker und markanter erscheint."
+  },
+  "faq3": {
+    "question": "Wo kann ich den von dieser App generierten Unicode-Text verwenden?",
+    "answer": "Der konvertierte Unicode-Text kann auf verschiedenen Online-Plattformen wie sozialen Medien, Messaging-Apps, Foren und mehr verwendet werden. Er verleiht Ihrem Text eine kreative Note und ermöglicht es Ihnen, sich abzuheben."
+  },
+  "faq4": {
+    "question": "Ist der Unicode-Text mit allen Geräten und Plattformen kompatibel?",
+    "answer": "In den meisten Fällen ja. Unicode ist ein standardisiertes Codierungssystem, das Kompatibilität über verschiedene Geräte und Plattformen hinweg sicherstellt. Es kann jedoch sein, dass einige Plattformen oder Apps nicht alle Unicode-Zeichen vollständig unterstützen, daher können die Ergebnisse variieren."
+  },
+  "faq5": {
+    "question": "Ist die Unicode-Textumwandlung umkehrbar? Kann ich sie in regulären Text zurückverwandeln?",
+    "answer": "Nein, die Umwandlung ist einseitig. Sobald der Text in Unicode umgewandelt ist, gibt es keinen direkten Mechanismus, um ihn in seine Originalform zurückzuverwandeln. Es wird empfohlen, eine Kopie des Originaltexts aufzubewahren, wenn dies erforderlich ist."
+  },
+  "faq6": {
+    "question": "Unterstützt die Unicode-Textumwandlung mehrere Sprachen?",
+    "answer": "Ja, die Unicode-Textumwandlung funktioniert mit Texten in verschiedenen Sprachen. Beachten Sie jedoch, dass bestimmte Zeichen und Stile in Sprachen mit lateinischen Skripten möglicherweise einen größeren Einfluss haben als in anderen."
+  },
+  "faq7": {
+    "question": "Kann ich das Unicode-Textkonversions-Web-App offline verwenden?",
+    "answer": "Die grundlegende Funktionalität der App erfordert eine Internetverbindung zum Laden, aber sobald geladen, können Sie die Progressive Web App (PWA) für die Textumwandlung herunterladen. Beachten Sie, dass bestimmte Funktionen wie Updates und Style-Vorschauen ohne Internetverbindung möglicherweise nicht verfügbar sind."
+  },
+  "faq8": {
+    "question": "Unterstützt die Web-App die Verwendung von kombinierten Zeichen und Diakritika für die Texttransformation?",
+    "answer": "Ja, die App unterstützt kombinierte Zeichen und Diakritika und ermöglicht es Benutzern, komplexeren und stilisierten Text zu erstellen. Die Kombination von Basiszeichen mit Diakritika ist ein wesentlicher Aspekt von Unicode und bietet Flexibilität für die Darstellung einer Vielzahl linguistischer und stilistischer Variationen."
+  },
+  "faq9": {
+    "question": "Wie werden Ersatzpaare und ergänzende Zeichen im Unicode-Konversionsprozess behandelt?",
+    "answer": "Die Web-App ist darauf ausgelegt, Ersatzpaare und ergänzende Zeichen zu verarbeiten, die Teil des Unicode-Standards zur Darstellung von Zeichen jenseits der Basic Multilingual Plane (BMP) sind. Dies stellt sicher, dass eine vielfältige Palette von Zeichen genau umgewandelt und angezeigt werden kann."
+  },
+  "keyFeatures": {
+    "title": "Key Features",
+    "li1": "<b>Weite Palette von Zeichen:</b> Wählen Sie aus einer umfangreichen Sammlung von Unicode-Zeichen und Symbolen, um Ihren Text zu personalisieren.",
+    "li2": "<b>Einfach zu bedienende Benutzeroberfläche:</b> Diese benutzerfreundliche, mobile Oberfläche gewährleistet eine nahtlose und unkomplizierte Textumwandlung, auch für Anfänger.",
+    "li3": "<b>Sofortvorschau:</b> Sehen Sie die Transformation in Echtzeit mit unserer Sofortvorschau-Funktion und feilen Sie an Ihrem schicken Text, bevor Sie ihn mit der Welt teilen.",
+    "li4": "<b>Kopieren und Einfügen leicht gemacht:</b> Kopieren Sie Ihren konvertierten Text mit einem einzigen Klick und fügen Sie ihn direkt in Ihre Lieblingsplattformen ein, um Zeit und Mühe zu sparen.",
+    "possibleTransofrms": "Mögliche Transformationen:"
+  }
+}

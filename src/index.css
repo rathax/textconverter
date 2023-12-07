@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #f9fafb;
+    background-blend-mode: hard-light,multiply;
+    background-image: url(https://www.primefaces.org/cdn/primevue/images/layout/pattern.png),radial-gradient(50% 50% at center top, #007bff21 0%,#fff 100%);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto 20rem;
+}
+
+.animate-gelatine {
+    animation: gelatine 0.5s forwards
+}
+@keyframes gelatine {
+    from, to { transform: scale(1, 1); fill:black }
+    25% { transform: scale(0.85, 1.15); fill: green}
+    50% { transform: scale(1.15, 0.85); fill: green}
+    75% { transform: scale(0.90, 1.10); fill: green}
+    100% { fill: black}
+}

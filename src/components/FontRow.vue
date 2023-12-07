@@ -23,17 +23,3 @@ async function copyText() {
   bounce.value = true
 }
 </script>
-
-<style>
-.animate-gelatine {
-  animation: gelatine 0.5s forwards;
-}
-@keyframes gelatine {
-  from, to { transform: scale(1, 1); fill:black }
-  25% { transform: scale(0.85, 1.15); fill: green}
-  50% { transform: scale(1.15, 0.85); fill: green}
-  75% { transform: scale(0.90, 1.10); fill: green}
-  100% { fill: black}
-
-}
-</style>
