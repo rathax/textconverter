@@ -8,18 +8,20 @@ import {SUPPORT_LOCALES, loadLocaleMessages, setI18nLanguage, setupI18n } from "
 // `export const createApp` is required instead of the original `createApp(App).mount('#app')`
 const i18n = setupI18n()
 
+
 export const createApp:any = ViteSSG(
   // the root component
   App,
   // vue-router options
   { routes: routes },
   // function to have custom setups
-  ({ app, router, routes, isClient, initialState }) => {
+  async ({ app, router, routes, isClient, initialState }) =>  {
+
     app.use(i18n)
 
     router.beforeEach(async (to, from, next) => {
       const paramsLocale = to.params.locale as string
-     
+  
       // use locale if paramsLocale is not in SUPPORT_LOCALES
       if (!SUPPORT_LOCALES.includes(paramsLocale)) {
         if(to.path === '/') {
@@ -50,3 +52,4 @@ export async function includedRoutes() {
   return SUPPORT_LOCALES.map((val) => '/' + val).concat(["/"])
  
 }
+

@@ -60,8 +60,7 @@
       <p class="mt-4">{{ t('keyFeatures.possibleTransofrms') }}
         circled, negative circled, Asian fullwidth, math bold, math bold Fraktur, math bold italic, math bold script, math
         double-struck, math monospace, math sans, math sans-serif bold, math sans-serif bold italic, math sans-serif
-        italic,
-        parenthesized, regional indicator symbols, squared, negative squared and more.</p>
+        italic, parenthesized, regional indicator symbols, squared, negative squared and more.</p>
     </div>
 
 
@@ -79,9 +78,23 @@ import { computed, ref } from 'vue';
 import * as db from "./stores/db"
 import { useI18n } from "vue-i18n";
 import PageHeader from "./components/PageHeader.vue";
+import { useHead,  } from "@unhead/vue";
+const { t } = useI18n();
+
+useHead({
+  meta: [
+      {
+        name: 'description',
+        content: `${t('title')} ${t('subTitle')}`.replace(new RegExp("<br>", 'g'), " "),
+      },
+    ],
+})
+
+
+
+
 const defaultInput = "Unicode Text Converter " + new Date().getFullYear() + " !"
 const input = ref(defaultInput)
-const { t } = useI18n();
 
 const data = computed(() => {
   const string = input.value.split("")

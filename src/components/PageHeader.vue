@@ -3,7 +3,7 @@
   <div class="">
     <div class="px-16 max-w-[1728px] m-auto h-16">
       <div> </div>
-      <div class="flex divide-x justify-end py-3 items-center h-full font-semibold" >
+      <div class="flex divide-x justify-between sm:justify-end py-3 items-center h-full font-semibold" >
         <div class="px-3">
           <RouterLink to="/">EN</RouterLink>
         </div>
