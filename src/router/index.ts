@@ -1,10 +1,10 @@
-import App from '../App.vue'
+import TextConverterVue from '@/views/TextConverter.vue'
 
 
 export default [
   {
     path: '/:locale?',
     name: 'index',
-    component: App,
+    component: TextConverterVue,
   },
 ]

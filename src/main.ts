@@ -4,6 +4,7 @@ import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 import routes from "./router/index"
 import {SUPPORT_LOCALES, loadLocaleMessages, setI18nLanguage, setupI18n } from "./plugins/i18n"
+import { useHead } from '@unhead/vue'
 
 // `export const createApp` is required instead of the original `createApp(App).mount('#app')`
 const i18n = setupI18n()
@@ -19,9 +20,12 @@ export const createApp:any = ViteSSG(
 
     app.use(i18n)
 
+  
+  
+
     router.beforeEach(async (to, from, next) => {
       const paramsLocale = to.params.locale as string
-  
+    
       // use locale if paramsLocale is not in SUPPORT_LOCALES
       if (!SUPPORT_LOCALES.includes(paramsLocale)) {
         if(to.path === '/') {
@@ -32,13 +36,15 @@ export const createApp:any = ViteSSG(
         return next(`/`)
       }
   
+        // set i18n language
+      setI18nLanguage(i18n, paramsLocale)
+
+
       // load locale messages
       if (!i18n.global.availableLocales.includes(paramsLocale as any)) {
         await loadLocaleMessages(i18n, paramsLocale)
+      
       }
-  
-      // set i18n language
-      setI18nLanguage(i18n, paramsLocale)
   
       return next()
     })

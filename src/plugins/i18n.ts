@@ -1,7 +1,7 @@
 import { nextTick } from 'vue'
 import { createI18n, type I18n } from 'vue-i18n'
 import en from '@/locales/en.json'
-import { useHead } from '@unhead/vue'
+import { useHead,  } from '@unhead/vue'
 
 export const SUPPORT_LOCALES = ['en', 'de', 'fr', "es", "cn"]
 
@@ -19,7 +19,7 @@ export function setupI18n() {
   return i18n
 }
 
-export function setI18nLanguage(i18n: any, locale: string) {
+export async function setI18nLanguage(i18n: any, locale: string) {
   i18n.global.locale.value = locale
 
   /**
@@ -29,10 +29,10 @@ export function setI18nLanguage(i18n: any, locale: string) {
    *
    * axios.defaults.headers.common['Accept-Language'] = locale
    */
+
   useHead({
     htmlAttrs: {lang: locale}
   })
-
 
   //  document.querySelector('html')!.setAttribute('lang', locale)
 }
