@@ -10,25 +10,28 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import PageHeader from "./views/layout/PageHeader.vue";
-import { useHead,  } from "@unhead/vue";
-const { t } = useI18n();
+import { useHead, } from "@unhead/vue";
+import { useRoute, onBeforeRouteUpdate } from "vue-router"
+import { computed, watch } from "vue";
+const { locale, t } = useI18n();
+const route = useRoute()
+const routepath = computed(() => "https://www.textconverter.net" + route?.path || "")
 
-
-
-
-useHead({
-  meta: [
+watch([routepath,locale], () => {
+  useHead({
+    meta: [
       {
         name: 'description',
-        content: `${t('title')} ${t('subTitle')}`.replace(new RegExp("<br>", 'g'), " "),
+        content: `${t('title')} ${t('subTitle')}`.replace(new RegExp(" <br> ", 'g'), ""),
       },
     ],
-})
+    link: [{ rel: "canonical", href: routepath }],
+    htmlAttrs: { lang: locale },
+  })
+}, {immediate: true})
 
 
 
 </script>
 
-<style>
-
-</style>
+<style></style>

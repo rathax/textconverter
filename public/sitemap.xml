@@ -6,23 +6,23 @@
 <xhtml:link
     rel="alternate"
     hreflang="es"
-    href="https://textconverter.net/es" />
+    href="https://www.textconverter.net/es" />
   <xhtml:link
     rel="alternate"
-    hreflang="cn"
-    href="https://textconverter.net/cn" />
+    hreflang="zh-CN"
+    href="https://www.textconverter.net/cn" />
   <xhtml:link
     rel="alternate"
     hreflang="de"
-    href="https://textconverter.net/de" />
+    href="https://www.textconverter.net/de" />
   <xhtml:link
     rel="alternate"
     hreflang="fr"
-    href="https://textconverter.net/fr" />
+    href="https://www.textconverter.net/fr" />
   <xhtml:link
     rel="alternate"
     hreflang="en"
-    href="https://textconverter.net/en" />
+    href="https://www.textconverter.net" />
 </url>
 </urlset>
 
