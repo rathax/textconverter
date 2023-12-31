@@ -3,7 +3,6 @@
   <div class="p-5">
     <section>
       <h1 class="text-3xl text-center font-bold mb-4 " v-html="t('title')"></h1>
-
       <h2 class="text-base text-center font-bold text-secondary" v-html="t('subTitle') + ' ' + t('subTitle2') "></h2>
       <div class="mt-8 mb-8 flex justify-center">
         <textarea rows="6" cols="50" aria-label="text"
