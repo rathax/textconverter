@@ -1,6 +1,12 @@
-# vuetify
+# [textconverter.net](https://www.textconverter.net)
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a simple app built with Vue + Tailwind + vite + vite-ssg - vite-pwa that convert plain text (letters, sometimes numbers) to obscure characters from Unicode. The output can easily be copy and pasted.
+
+**Key Features**
+* Wide Range of Characters: Choose from an extensive collection of Unicode characters an symbols to personalize your text
+* Easy-to-Use Interface: This mobile friendly interface ensures a seamless and hassle-free text conversion experience, even for beginners.
+* Instant Preview: See the transformation in real-time with our instant preview feature, allowing you to fine-tune your fancy text before sharing it with the world.
+* Copy and Paste Convenience: Copy your converted text with a single click and paste it directly into your favorite platforms, saving you time and effort.
 
 ## Recommended IDE Setup
 
@@ -45,21 +51,5 @@ npm run build
 # Install browsers for the first run
 npx playwright install
 
-# When testing on CI, must build the project first
+# to buil the SSG bundle
 npm run build
-
-# Runs the end-to-end tests
-npm run test:e2e
-# Runs the tests only on Chromium
-npm run test:e2e -- --project=chromium
-# Runs the tests of a specific file
-npm run test:e2e -- tests/example.spec.ts
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
