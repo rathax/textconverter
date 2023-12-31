@@ -1,6 +1,7 @@
 {
     "title": "在 <br> Facebook、WhatsApp、Twitter(X) 和更多平台上运行的Unicode文本转换器。",
     "subTitle": "此应用程序将字符从ASCII范围转换。字符是一对一转换的。",
+    "subTitle2": "字符是一对一转换的。",
     "faq1": {
     "question": "这个Unicode文本转换Web应用的目的是什么？",
     "answer": "该Web应用程序旨在将常规文本转换为Unicode字符，为用户提供在各种平台上表达自己的创造性和视觉吸引力的方式。无论是撰写社交媒体帖子、设计网站还是为消息添加个人风格。"

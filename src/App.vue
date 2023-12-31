@@ -11,7 +11,7 @@
 import { useI18n } from "vue-i18n";
 import PageHeader from "./views/layout/PageHeader.vue";
 import { useHead, } from "@unhead/vue";
-import { useRoute, onBeforeRouteUpdate } from "vue-router"
+import { useRoute, } from "vue-router"
 import { computed, watch } from "vue";
 const { locale, t } = useI18n();
 const route = useRoute()
@@ -29,8 +29,6 @@ watch([routepath,locale], () => {
     htmlAttrs: { lang: locale },
   })
 }, {immediate: true})
-
-
 
 </script>
 

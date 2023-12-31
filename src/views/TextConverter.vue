@@ -4,7 +4,7 @@
     <section>
       <h1 class="text-3xl text-center font-bold mb-4 " v-html="t('title')"></h1>
 
-      <h2 class="text-base text-center font-bold text-secondary" v-html="t('subTitle')"></h2>
+      <h2 class="text-base text-center font-bold text-secondary" v-html="t('subTitle') + ' ' + t('subTitle2') "></h2>
       <div class="mt-8 mb-8 flex justify-center">
         <textarea rows="6" cols="50" aria-label="text"
           class="px-3 py-2 rounded border border-gray-300 outline-0 focus:ring-[3px]  border-r-2 ring-[rgba(38,143,255,0.5)]  transition-shadow duration-150  focus:border-[#007bff]  w-full max-w-4xl"
@@ -69,7 +69,6 @@ import FontRow from "@/components/FontRow.vue"
 import { computed, ref } from 'vue';
 import * as db from "@/stores/db"
 import { useI18n } from "vue-i18n";
-import { useHead } from "@unhead/vue";
 const { t } = useI18n();
 
 

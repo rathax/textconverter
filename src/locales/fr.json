@@ -1,6 +1,8 @@
 {
   "title": "Convertisseur de texte Unicode qui fonctionne sur <br> Facebook, WhatsApp, Twitter(X) et bien plus encore.",
-  "subTitle": "Cette application convertit des caractères de la plage ASCII. Les caractères sont convertis de manière un à un.",
+  "subTitle": "Cette application convertit des caractères de la plage ASCII.",
+  "subTitle2": "Les caractères sont convertis de manière un à un.",
+
   "faq1": {
     "question": "Quel est le but de cette application web de conversion de texte Unicode?",
     "answer": "L'application web est conçue pour transformer un texte régulier en caractères Unicode, offrant aux utilisateurs un moyen créatif et visuellement attrayant de s'exprimer sur différentes plates-formes. Que vous rédigiez un message sur les réseaux sociaux, conceviez un site web ou ajoutiez une touche personnelle à vos messages."

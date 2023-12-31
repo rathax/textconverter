@@ -1,6 +1,7 @@
 {
   "title": "Unicode-Textkonverter, der in <br> Facebook, WhatsApp, Twitter(X) und vielem mehr funktioniert.",
-  "subTitle": "Diese App konvertiert Zeichen aus dem ASCII-Bereich. Zeichen werden eins zu eins umgewandelt.",
+  "subTitle": "Diese App konvertiert Zeichen aus dem ASCII-Bereich.",
+  "subTitle2": "Zeichen werden eins zu eins umgewandelt.",
   "faq1": {
     "question": "Was ist der Zweck dieses Unicode-Textkonversions-Web-Apps?",
     "answer": "Die Web-App ist darauf ausgelegt, regulären Text in Unicode-Zeichen umzuwandeln und Benutzern eine kreative und visuell ansprechende Möglichkeit zu bieten, sich auf verschiedenen Plattformen auszudrücken. Egal, ob Sie einen Social-Media-Beitrag verfassen, eine Website gestalten oder Ihren Nachrichten eine persönliche Note hinzufügen."
