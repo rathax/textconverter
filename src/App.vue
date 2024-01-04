@@ -22,7 +22,7 @@ watch([routepath,locale], () => {
     meta: [
       {
         name: 'description',
-        content: `${t('title')} ${t('subTitle')}`.replace(new RegExp(" <br> ", 'g'), ""),
+        content: `AD-FREE ${t('title')} ${t('subTitle')}`.replace(new RegExp(" <br> ", 'g'), ""),
       },
     ],
     link: [{ rel: "canonical", href: routepath }],
