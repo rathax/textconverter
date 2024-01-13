@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     background-color: #f9fafb;
     background-blend-mode: hard-light,multiply;
-    background-image: url(https://www.primefaces.org/cdn/primevue/images/layout/pattern.png),radial-gradient(50% 50% at center top, #007bff21 0%,#fff 100%);
+    background-image: url('@/assets/pattern.png'),radial-gradient(50% 50% at center top, #007bff21 0%,#fff 100%);
     background-position: top;
     background-repeat: no-repeat;
     background-size: auto 20rem;
