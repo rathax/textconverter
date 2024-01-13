@@ -2,7 +2,7 @@
 
 This is a simple app built with Vue + Tailwind + vite + vite-ssg - vite-pwa that convert plain text (letters, sometimes numbers) to obscure characters from Unicode. The output can easily be copy and pasted.
 
-## Key Features**
+## Key Features
 * Wide Range of Characters: Choose from an extensive collection of Unicode characters an symbols to personalize your text
 * Easy-to-Use Interface: This mobile friendly interface ensures a seamless and hassle-free text conversion experience, even for beginners.
 * Instant Preview: See the transformation in real-time with our instant preview feature, allowing you to fine-tune your fancy text before sharing it with the world.
