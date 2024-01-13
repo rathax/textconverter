@@ -8,7 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 .history/*
 .vite-ssg-temp/*
-.*/*
 
 node_modules
 .DS_Store

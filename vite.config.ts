@@ -27,8 +27,7 @@ return {
     VitePWA({
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       injectRegister: 'script-defer',
-      workbox: { skipWaiting: true },
-      
+      workbox: { skipWaiting: true, },
       manifest: {
         name: 'Unicode Text Converter',
         short_name: 'TC',

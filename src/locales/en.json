@@ -1,5 +1,5 @@
 {
-    "title": "Unicode text converter that works in <br> Facebook, WhatsApp, Twitter(X), and lots more.",
+    "title": "Unicode text converter that works in <br> Facebook, WhatsApp, Twitter(X), LinkedIn and lots more.",
     "subTitle": "This App converts characters from the ASCII range.",
     "subTitle2": "Characters are converted on a one to one basis.",
 
@@ -24,8 +24,8 @@
       "answer": "No, the conversion is one-way. Once the text is converted to Unicode, there is no direct mechanism to revert it back to its original form. It's recommended to keep a copy of the original text if needed."
     },
     "faq6": {
-      "question": "Is the Unicode text conversion supported in multiple languages?",
-      "answer": "Yes, the Unicode text conversion works with texts in various languages. However, keep in mind that certain characters and styles may have a more significant impact on languages with Latin-based scripts compared to others."
+      "question": "Is the Unicode font translation supported in multiple languages?",
+      "answer": "Yes, the Unicode font translation works with texts in various languages. However, keep in mind that certain characters and styles may have a more significant impact on languages with Latin-based scripts compared to others."
     },
     "faq7": {
       "question": "Can I use the Unicode text conversion web app offline?",
@@ -45,7 +45,7 @@
       "li2": "<b>Easy-to-Use Interface:</b> This mobile friendly interface ensures a seamless and hassle-free text conversion experience, even for beginners.",
       "li3": "<b>Instant Preview:</b> See the transformation in real-time with our instant preview feature, allowing you to fine-tune your fancy text before sharing it with the world.",
       "li4": "<b>Copy and Paste Convenience:</b> Copy your converted text with a single click and paste it directly into your favorite platforms, saving you time and effort.",
-      "possibleTransofrms": "Possible transforms:"
+      "possibleTransofrms": "Possible font transforms:"
     }
   }
   
