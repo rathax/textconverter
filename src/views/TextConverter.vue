@@ -87,7 +87,11 @@ const data = computed(() => {
   const charsetmap: string[] = []
 
   for (const charset in db) {
+
     charsetmap.push(helper(string, (db as any)[charset]) as any)
+    if(charset === "sa" || charset === "sb" ) {
+      charsetmap.push(helper(string.slice().reverse(), (db as any)[charset]) as any)
+    }
   }
 
 
@@ -108,6 +112,7 @@ const data = computed(() => {
 
   return charsetmap
 })
+
 
 </script>
   
