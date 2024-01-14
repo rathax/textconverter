@@ -93,6 +93,7 @@ const data = computed(() => {
       charsetmap.push(helper(string.slice().reverse(), (db as any)[charset]) as any)
     }
   }
+  charsetmap.push(string.slice().reverse().join(""))
 
 
   charsetmap.push(input.value.replace(/([^\s])/g, "[̲̅$1]"))
