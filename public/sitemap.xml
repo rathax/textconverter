@@ -2,27 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
-  <loc>https://textconverter.net</loc>
-<xhtml:link
-    rel="alternate"
-    hreflang="es"
-    href="https://www.textconverter.net/es" />
-  <xhtml:link
-    rel="alternate"
-    hreflang="zh-CN"
-    href="https://www.textconverter.net/cn" />
-  <xhtml:link
-    rel="alternate"
-    hreflang="de"
-    href="https://www.textconverter.net/de" />
-  <xhtml:link
-    rel="alternate"
-    hreflang="fr"
-    href="https://www.textconverter.net/fr" />
-  <xhtml:link
-    rel="alternate"
-    hreflang="en"
-    href="https://www.textconverter.net" />
-</url>
+  <loc>https://textconverter.net/</loc>
 </urlset>
 
