@@ -10,6 +10,10 @@ import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 export default defineConfig((options) => {
 return {
+  ssr: {
+    // SSG Vue-i18n workaround
+  noExternal: [/vue-i18n/],
+  },
   ssgOptions: {
     crittersOptions: {
       preload: 'media'

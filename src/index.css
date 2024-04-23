@@ -13,12 +13,12 @@ body {
 }
 
 .animate-gelatine {
-    animation: gelatine 0.5s forwards
+    animation: gelatine 0.5s normal
 }
 @keyframes gelatine {
-    from, to { transform: scale(1, 1); fill:black }
-    25% { transform: scale(0.85, 1.15); fill: green}
-    50% { transform: scale(1.15, 0.85); fill: green}
-    75% { transform: scale(0.90, 1.10); fill: green}
-    100% { fill: black}
+    from, to { transform: scale(1, 1); background-color:black }
+    25% { transform: scale(0.85, 1.15); background-color: green}
+    50% { transform: scale(1.15, 0.85); background-color: green}
+    75% { transform: scale(0.90, 1.10); background-color: green}
+    100% { transform: scale(1, 1); background-color: black}
 }

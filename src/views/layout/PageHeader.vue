@@ -19,10 +19,10 @@
         <div class="px-3 ">
           <RouterLink :to="'/zh-CN'"  rel="alternate" hreflang="zh-CN">CN</RouterLink>
         </div>
-        <div class="px-3 ">
+ <!--        <div class="px-3 ">
           <a href="https://github.com/rathax/textconverter" target="_blank" aria-label="Visit Text Converter on Github"><GithubIcon class="h-[22px] w-[22px]" /></a>
-        </div>
-      </div>
+        </div>-->
+      </div> 
     </div>
 
 

@@ -2,7 +2,7 @@
 <template>
   <div class="p-5">
     <section>
-      <h1 class="text-3xl text-center font-bold mb-4 " v-html="t('title')"></h1>
+      <h1 class="text-3xl text-center font-bold mb-4 whitespace-break-spaces" v-html="t('title')"></h1>
       <h2 class="text-base text-center font-bold text-secondary" v-html="t('subTitle') + ' ' + t('subTitle2') "></h2>
       <div class="mt-8 mb-8 flex justify-center">
         <textarea rows="6" cols="50" aria-label="text"
@@ -16,7 +16,7 @@
         <FontRow v-for="(item, index) in data" :key="index" :text="item"></FontRow>
       </div>
     </section>
-    <section class="mt-14 text-center md:text-left max-w-5xl m-auto leading-7 text-base">
+    <section class="mt-14 text-center md:text-left max-w-5xl m-auto formatted-text">
       <h3 class="text-h3" v-html="t('faq1.question')"></h3>
       <p class="" v-html="t('faq1.answer')"></p>
 
@@ -65,24 +65,33 @@
   
 <script setup lang="ts">
 import FontRow from "@/components/FontRow.vue"
-import { computed, ref } from 'vue';
+import { computed, watch, ref } from 'vue';
 import * as db from "@/stores/db"
 import { useI18n } from "vue-i18n";
+import { useRouter, } from "vue-router"
+const router = useRouter()
 const { t } = useI18n();
-
 
 const defaultInput = "Unicode Text Converter " + new Date().getFullYear() + " !"
 const input = ref(defaultInput)
+if(router.currentRoute.value.query.text && typeof router.currentRoute.value.query.text ===  "string") {
+  input.value = router.currentRoute.value.query.text
+}
 
-const data = computed(() => {
-  const string = input.value.split("")
 
-  const helper = (string: string[], table: Record<string, string>) => {
+watch(input, (val) => {
+     router.replace({...router.currentRoute.value, query: {text: val}});
+})
+const helper = (string: string[], table: Record<string, string>) => {
     return string.map((char) => {
       if (char === '\n') return "<br>"
       return table[char] ?? char
     }).join('')
   }
+
+const data = computed(() => {
+  const string = input.value.split("")
+
 
   const charsetmap: string[] = []
 

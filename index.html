@@ -10,21 +10,29 @@
       name="keywords"
       content="unicode text converter, text converter, unicode converter, fancy text converter, font translate, unicode text transformer, text transformer, qaz wtf"
     />
-    <link rel="alternate" hreflang="x-default" href="https://www.textconverter.net/" />
-    <link rel="alternate" hreflang="en" href="https://www.textconverter.net/" />
-    <link rel="alternate" hreflang="fr" href="https://www.textconverter.net/fr/" />
-    <link rel="alternate" hreflang="de" href="https://www.textconverter.net/de/" />
-    <link rel="alternate" hreflang="es" href="https://www.textconverter.net/es/" />
-    <link rel="alternate" hreflang="zh-CN" href="https://www.textconverter.net/zh-CN/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.textconverter.net" />
+    <link rel="alternate" hreflang="en" href="https://www.textconverter.net" />
+    <link rel="alternate" hreflang="fr" href="https://www.textconverter.net/fr" />
+    <link rel="alternate" hreflang="de" href="https://www.textconverter.net/de" />
+    <link rel="alternate" hreflang="es" href="https://www.textconverter.net/es" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.textconverter.net/zh-CN" />
 
     <script type="application/ld+json">
       [
         {
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "url": "https://www.textconverter.net/",
+          "url": "https://www.textconverter.net",
           "name": "Text Converter",
-          "alternateName": ["Unicode Text Converter", "Unicode Text Translator"]
+          "alternateName": ["Unicode Text Converter", "Unicode Text Translator"],
+          "potentialAction": [{
+            "@type": "CreateAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.textconverter.net/?text={text_to_convert}"
+            },
+            "query-input": "required name=text_to_convert"
+          }]
         },
         {
           "@context": "https://schema.org",

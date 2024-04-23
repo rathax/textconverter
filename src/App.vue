@@ -15,7 +15,7 @@ import { useRoute, } from "vue-router"
 import { computed, watch } from "vue";
 const { locale, t } = useI18n();
 const route = useRoute()
-const routepath = computed(() => "https://www.textconverter.net" + route?.path || "")
+const routepath = computed(() => "https://www.textconverter.net" + (route?.path === '/' ? "" : route?.path) || "")
 
 watch([routepath,locale], () => {
   useHead({

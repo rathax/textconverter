@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from "tailwindcss/plugin"
+
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx,vue}",
   ],
+
   theme: {
- 
     fontSize: {
-      h1: '',
-      
       sm: '0.8rem',
       base: '1.094rem',
       xl: '1.25rem',
@@ -18,5 +18,16 @@ export default {
       '5xl': '3.052rem',
     }
   },
-  plugins: [],
+   plugins: [
+    plugin(function({ addComponents }) {
+      addComponents({
+        ".formatted-text": {
+          "@apply leading-7 text-base": {},
+          "a": {
+            "@apply text-[#007bff]": {},
+          }
+        },
+      })
+    }),
+  ],
 }

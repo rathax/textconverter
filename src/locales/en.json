@@ -1,11 +1,11 @@
 {
-    "title": "Unicode text converter that works in <br> Facebook, WhatsApp, Twitter(X), LinkedIn and lots more.",
+    "title": "Unicode text converter that works in\nFacebook, WhatsApp, Twitter(X), LinkedIn and lots more.",
     "subTitle": "This App converts characters from the ASCII range.",
     "subTitle2": "Characters are converted on a one to one basis.",
 
     "faq1": {
       "question": "What is the purpose of this Unicode text conversion web app?",
-      "answer": "The web app is designed to transform regular text into Unicode characters, providing users with a creative and visually appealing way to express themselves on various platforms. Whether you're crafting a social media post, designing a website, or adding a personal touch to your messages."
+      "answer": "The web app is designed to transform regular text into Unicode characters, providing users a creative and visually appealing way to express themselves on various platforms. Whether you're crafting a social media post, designing a website, or adding a personal touch to your messages."
     },
     "faq2": {
       "question": "How does the Unicode text conversion work?",
@@ -29,15 +29,15 @@
     },
     "faq7": {
       "question": "Can I use the Unicode text conversion web app offline?",
-      "answer": "The basic functionality of the app requires an internet connection to load, but once loaded, you can download the Progressive Web App (PWA) for text conversion. Keep in mind that certain features, such as updates and style previews, may not be available without an internet connection."
+      "answer": "The basic functionality of the app requires an internet connection to load, but once loaded, you can download the Progressive Web App (PWA) for text conversion. Keep in mind that certain features, such as updates, may not be available without an internet connection."
     },
     "faq8": {
       "question": "Does the web app support combining characters and diacritics for text transformation?",
       "answer": "Yes, the app supports combining characters and diacritics, allowing users to create more intricate and stylized text. The combination of base characters with diacritics is a key aspect of Unicode, providing flexibility for representing a wide range of linguistic and stylistic variations."
     },
     "faq9": {
-      "question": "How are surrogate pairs and supplementary characters handled in the Unicode conversion process?",
-      "answer": "The web app is designed to handle surrogate pairs and supplementary characters, which are part of the Unicode standard for representing characters beyond the Basic Multilingual Plane (BMP). This ensures that a diverse range of characters can be accurately converted and displayed."
+      "question": "Want to contribute?",
+      "answer": "Visit <a  href=\"https://github.com/rathax/textconverter\" target=\"_blank\" rel=\"nofollow\" >Text Converter on GitHub!</a> Whether it’s suggesting new features, reporting bugs, or contributing to the code, your input is invaluable in shaping this tool."
     },
     "keyFeatures": {
       "title": "Key Features",
