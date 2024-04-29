@@ -4,9 +4,32 @@ import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 import routes from './router/index'
 import { SUPPORT_LOCALES, loadLocaleMessages, setI18nLanguage, setupI18n } from './plugins/i18n'
+import { onINP} from 'web-vitals';
 
 // `export const createApp` is required instead of the original `createApp(App).mount('#app')`
 const i18n = setupI18n()
+
+onINP(sendToGoogleAnalytics, {reportAllChanges: true});
+
+function sendToGoogleAnalytics({delta, value, id}) {
+  const eventParams = {
+    // Built-in params:
+    value: delta, // Use `delta` so the value can be summed.
+    // Custom params:
+    metric_id: id, // Needed to aggregate events.
+    metric_value: value, // Optional.
+    metric_delta: delta, // Optional.
+  };
+
+  console.log(eventParams)
+}
+
+setTimeout(() => {
+  console.log("timeout")
+  document.getElementsByTagName('textarea').item(0)?.click()
+  console.log(document.getElementsByTagName('textarea').item(0))
+
+}, 50)
 
 export const createApp: any = ViteSSG(
   // the root component
@@ -16,7 +39,7 @@ export const createApp: any = ViteSSG(
   // function to have custom setups
   async ({ app, router, routes, isClient, initialState }) => {
     app.use(i18n)
-    
+
     router.beforeEach(async (to, from, next) => {
       const paramsLocale = to.params.locale as string
       // use locale if paramsLocale is not in SUPPORT_LOCALES
