@@ -27,7 +27,7 @@ return {
       /* options */
       // locale messages resource pre-compile option
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),
-        strictMessage: false, fullInstall: false, ssr: options.ssrBuild, runtimeOnly: true, }),
+        strictMessage: false, fullInstall: false, ssr: options.isSsrBuild, runtimeOnly: true, }),
     VitePWA({
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       injectRegister: 'script-defer',
