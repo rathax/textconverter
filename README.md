@@ -1,45 +1,75 @@
-# [textconverter.net](https://www.textconverter.net)
+# Nuxt 3 Minimal Starter
 
-This is a simple app built with Vue + Tailwind + vite + vite-ssg - vite-pwa that convert plain text (letters, sometimes numbers) to obscure characters from Unicode. The output can easily be copy and pasted.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Key Features
-* Wide Range of Characters: Choose from an extensive collection of Unicode characters an symbols to personalize your text
-* Easy-to-Use Interface: This mobile friendly interface ensures a seamless and hassle-free text conversion experience, even for beginners.
-* Instant Preview: See the transformation in real-time with our instant preview feature, allowing you to fine-tune your fancy text before sharing it with the world.
-* Copy and Paste Convenience: Copy your converted text with a single click and paste it directly into your favorite platforms, saving you time and effort.
+## Setup
 
-## Recommended IDE Setup
+Make sure to install the dependencies:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
+# npm
 npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
-### Compile and Hot-Reload for Development
+## Development Server
 
-```sh
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
 npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Production
 
-```sh
+Build the application for production:
+
+```bash
+# npm
 npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
 
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
+Locally preview production build:
 
-```sh
-# Install browsers for the first run
-npx playwright install
+```bash
+# npm
+npm run preview
 
-# to buil the SSG bundle
-npm run build
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

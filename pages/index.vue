@@ -66,11 +66,11 @@
 <script setup lang="ts">
 import FontRow from "@/components/FontRow.vue"
 import { computed, watch, ref } from 'vue';
-import * as db from "@/stores/db"
+import * as db from "@/assets/db"
 import { useI18n } from "vue-i18n";
 import { useRouter, } from "vue-router"
 const router = useRouter()
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const defaultInput = "Unicode Text Converter " + new Date().getFullYear() + " !"
 const input = ref(defaultInput)
@@ -96,7 +96,6 @@ const data = computed(() => {
   const charsetmap: string[] = []
 
   for (const charset in db) {
-
     charsetmap.push(helper(string, (db as any)[charset]) as any)
     if(charset === "sa" || charset === "sb" ) {
       charsetmap.push(helper(string.slice().reverse(), (db as any)[charset]) as any)
@@ -122,10 +121,70 @@ const data = computed(() => {
 })
 
 
+useSeoMeta({
+  title: 'Text Converter | Unicode Text Converter',
+  ogTitle: 'Text Converter | Unicode Text Converter',
+  description: () => `AD-FREE ${t('title')}`.replace(new RegExp(" <br> ", 'g'), ""),
+  ogDescription: `AD-FREE ${t('title')}`.replace(new RegExp(" <br> ", 'g'), ""),
+  author: 'ratHax',
+  keywords: 'unicode text converter, text converter, unicode converter, fancy text converter, font translate, unicode text transformer, text transformer, qaz wtf"',
+})
+
+
+watch([locale], () => {
+  useHead({
+    link: [
+    { rel: "alternate", hreflang: "x-default", href: "https://www.textconverter.net" },
+    { rel: "alternate", hreflang: "en", href: "https://www.textconverter.net/en" },
+    { rel: "alternate", hreflang: "fr", href: "https://www.textconverter.net/fr" },
+    { rel: "alternate", hreflang: "de", href: "https://www.textconverter.net/de" },
+    { rel: "alternate", hreflang: "es", href: "https://www.textconverter.net/es" },
+    { rel: "alternate", hreflang: "zh-CN", href: "https://www.textconverter.net/zh-CN" },
+    ],
+    script: [{
+      type: "application/ld+json", innerHTML: JSON.stringify([
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://www.textconverter.net",
+          "name": "Text Converter",
+          "alternateName": ["Unicode Text Converter", "Unicode Text Translator"],
+          "potentialAction": [{
+            "@type": "CreateAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.textconverter.net/?text={text_to_convert}"
+            },
+            "query-input": "required name=text_to_convert"
+          }]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "url": "https://www.textconverter.net",
+          "name": "Text Converter",
+          "alternateName": ["Unicode Text Converter", "Unicode Text Translator"],
+          "applicationCategory": "UtilitiesApplication",
+          "browserRequirements": "Requires modern web browser",
+          "operatingSystem": "API-based",
+          "softwareHelp": "https://github.com/rathax/textconverter",
+          "featureList": [
+            "Unicode text converter that works in Facebook, WhatsApp, Twitter(X), LinkedIn and lots more.",
+            "Easy-to-Use Interface for hassle-free text conversion experience",
+            "Copy and Paste Convenience",
+            "Instant Preview",
+            "Wide Range of Characters: Choose from an extensive collection of Unicode characters an symbols to personalize your text"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          }
+        }
+      ])
+    }],
+    htmlAttrs: { lang: locale },
+  })
+}, { immediate: true })
+
 </script>
   
-<style>
-.text-h3 {
-  @apply mt-5 mb-3 text-xl font-bold
-}
-</style>

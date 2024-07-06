@@ -3,5 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
   <loc>https://textconverter.net/</loc>
+</url>
+<url>
+  <loc>https://textconverter.net/about</loc>
+</url>
+<url>
+  <loc>https://textconverter.net/contact</loc>
+</url>
+<url>
+  <loc>https://textconverter.net/privacy</loc>
+</url>
 </urlset>
 
