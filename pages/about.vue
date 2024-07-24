@@ -28,9 +28,9 @@
   </p>
 
 <ul class="my-5">
-  <li class="list-none"><a href="https://github.com/rathax" target="_blank">Github</a></li>
-  <li><a href="https://x.com/godlikeplayer1"  target="_blank">X</a></li>
-  <li><a href="https://www.reddit.com/user/godlikeplayer2"  target="_blank">Reddit</a></li>
+  <li class="list-none"><a href="https://github.com/rathax" target="_blank" rel="nofollow">Github</a></li>
+  <li><a href="https://x.com/godlikeplayer1"  target="_blank" rel="nofollow">X</a></li>
+  <li><a href="https://www.reddit.com/user/godlikeplayer2"  target="_blank" rel="nofollow">Reddit</a></li>
 
   <li></li>
 

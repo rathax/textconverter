@@ -5,8 +5,9 @@
       <h1 class="text-3xl text-center font-bold mb-4 whitespace-break-spaces" v-html="t('title')"></h1>
       <h2 class="text-base text-center font-bold text-secondary" v-html="t('subTitle') + ' ' + t('subTitle2') "></h2>
       <div class="mt-8 mb-8 flex justify-center">
+        <!-- transition-shadow duration-150 removed due to INP debugging-->
         <textarea rows="6" cols="50" aria-label="text"
-          class="px-3 py-2 rounded border border-gray-300 outline-0 focus:ring-[3px]  border-r-2 ring-[rgba(38,143,255,0.5)]  transition-shadow duration-150  focus:border-[#007bff]  w-full max-w-4xl"
+          class="px-3 py-2 rounded border border-gray-300 outline-0 focus:ring-[3px]  border-r-2 ring-[rgba(38,143,255,0.5)]    focus:border-[#007bff]  w-full max-w-4xl"
           v-model="input"></textarea>
 
       </div>
@@ -124,8 +125,8 @@ const data = computed(() => {
 useSeoMeta({
   title: 'Text Converter | Unicode Text Converter',
   ogTitle: 'Text Converter | Unicode Text Converter',
-  description: () => `AD-FREE ${t('title')}`.replace(new RegExp(" <br> ", 'g'), ""),
-  ogDescription: `AD-FREE ${t('title')}`.replace(new RegExp(" <br> ", 'g'), ""),
+  description: () => `${t('title')}`.replace(new RegExp(" <br> ", 'g'), ""),
+  ogDescription: `${t('title')}`.replace(new RegExp(" <br> ", 'g'), ""),
   author: 'ratHax',
   keywords: 'unicode text converter, text converter, unicode converter, fancy text converter, font translate, unicode text transformer, text transformer, qaz wtf"',
 })
@@ -135,7 +136,7 @@ watch([locale], () => {
   useHead({
     link: [
     { rel: "alternate", hreflang: "x-default", href: "https://www.textconverter.net" },
-    { rel: "alternate", hreflang: "en", href: "https://www.textconverter.net/en" },
+    { rel: "alternate", hreflang: "en", href: "https://www.textconverter.net" },
     { rel: "alternate", hreflang: "fr", href: "https://www.textconverter.net/fr" },
     { rel: "alternate", hreflang: "de", href: "https://www.textconverter.net/de" },
     { rel: "alternate", hreflang: "es", href: "https://www.textconverter.net/es" },

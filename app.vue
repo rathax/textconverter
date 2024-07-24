@@ -1,6 +1,6 @@
 <template>
   <div class="flex min-h-screen flex-col">
-    <div class="">
+    <header class="">
       <div class="px-16 max-w-[1728px] m-auto h-16">
         <div> </div>
         <div class="flex divide-x justify-between sm:justify-end py-3 items-center h-full font-semibold">
@@ -24,12 +24,12 @@
         </div>-->
         </div>
       </div>
-    </div>
+    </header>
     <div class="flex-grow">
       <NuxtPage />
 
     </div>
-    <div class="p-10 m-0  mt-10 sm:px-20 bg-surface-card border-t border-surface-border text-center h3">
+    <footer class="p-10 m-0  mt-10 sm:px-20 bg-surface-card border-t border-surface-border text-center h3">
       <nuxt-link to="/about" class="my-3 block">
         About
       </nuxt-link>
@@ -42,7 +42,7 @@
       <a href="https://github.com/rathax/textconverter" class="my-3 block" target="_blank" rel="nofollow">
         GitHub
       </a>
-    </div>
+    </footer>
 
   </div>
 </template>
@@ -63,6 +63,7 @@ if(import.meta.browser	) {
 
 watch([routepath], () => {
   useHead({
+    script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7920782567845375", async: true, crossorigin: "anonymous"}],
     link: [{ rel: "canonical", href: routepath }]
   })
 }, { immediate: true })
