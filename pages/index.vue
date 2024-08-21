@@ -2,19 +2,24 @@
 <template>
   <div class="p-5">
     <section>
-      <h1 class="text-3xl text-center font-bold mb-4 whitespace-break-spaces" v-html="t('title')"></h1>
-      <h2 class="text-base text-center font-bold text-secondary" v-html="t('subTitle') + ' ' + t('subTitle2') "></h2>
-      <div class="mt-8 mb-8 flex justify-center">
-        <!-- transition-shadow duration-150 removed due to INP debugging-->
-        <textarea rows="6" cols="50" aria-label="text"
-          class="px-3 py-2 rounded border border-gray-300 outline-0 focus:ring-[3px]  border-r-2 ring-[rgba(38,143,255,0.5)]    focus:border-[#007bff]  w-full max-w-4xl"
-          v-model="input"></textarea>
-
+      <div>
+        <h1 class="text-3xl text-center font-bold mb-4 whitespace-break-spaces" v-html="t('title')"></h1>
+        <h2 class="text-base text-center font-bold text-secondary" v-html="t('subTitle') + ' ' + t('subTitle2')"></h2>
+          <div class="mt-8 mb-8 flex justify-center">
+            <!-- transition-shadow duration-150 removed due to INP debugging-->
+            <textarea rows="6" cols="50" aria-label="text"
+              class="px-3 py-2 rounded border border-gray-300 outline-0 focus:ring-[3px]  border-r-2 ring-[rgba(38,143,255,0.5)]    focus:border-[#007bff]  w-full max-w-4xl"
+              v-model="input"></textarea>
+          </div>
       </div>
-
-      <div class="flex-col">
-
-        <FontRow v-for="(item, index) in data" :key="index" :text="item"></FontRow>
+      <div>
+        <div class="flex flex-col">
+          <FontRow v-for="(item, index) in data" :key="index" :text="item"></FontRow>
+        </div>
+        <div align="center" class="min-h-72">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7920782567845375" data-ad-slot="1375391614"
+          data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
       </div>
     </section>
     <section class="mt-14 text-center md:text-left max-w-5xl m-auto formatted-text">
@@ -75,20 +80,20 @@ const { t, locale } = useI18n();
 
 const defaultInput = "Unicode Text Converter " + new Date().getFullYear() + " !"
 const input = ref(defaultInput)
-if(router.currentRoute.value.query.text && typeof router.currentRoute.value.query.text ===  "string") {
+if (router.currentRoute.value.query.text && typeof router.currentRoute.value.query.text === "string") {
   input.value = router.currentRoute.value.query.text
 }
 
 
 watch(input, (val) => {
-     router.replace({...router.currentRoute.value, query: {text: val}});
+  router.replace({ ...router.currentRoute.value, query: { text: val } });
 })
 const helper = (string: string[], table: Record<string, string>) => {
-    return string.map((char) => {
-      if (char === '\n') return "<br>"
-      return table[char] ?? char
-    }).join('')
-  }
+  return string.map((char) => {
+    if (char === '\n') return "<br>"
+    return table[char] ?? char
+  }).join('')
+}
 
 const data = computed(() => {
   const string = input.value.split("")
@@ -98,11 +103,11 @@ const data = computed(() => {
 
   for (const charset in db) {
     charsetmap.push(helper(string, (db as any)[charset]) as any)
-    if(charset === "sa" || charset === "sb" ) {
+    if (charset === "sa" || charset === "sb") {
       charsetmap.push(helper(string.slice().reverse(), (db as any)[charset]) as any)
     }
   }
-  
+
   charsetmap.push(string.slice().reverse().join(""))
   charsetmap.push(input.value.replace(/([^\s])/g, "[̲̅$1]"))
   charsetmap.push(input.value.replace(/([^\s])/g, "\u3010$1\u3011"))
@@ -131,16 +136,21 @@ useSeoMeta({
   keywords: 'unicode text converter, text converter, unicode converter, fancy text converter, font translate, unicode text transformer, text transformer, qaz wtf"',
 })
 
+if(window) {
+    // @ts-expect-error
+  (window.adsbygoogle = window.adsbygoogle || []).push({});
+}
+
 
 watch([locale], () => {
   useHead({
     link: [
-    { rel: "alternate", hreflang: "x-default", href: "https://www.textconverter.net" },
-    { rel: "alternate", hreflang: "en", href: "https://www.textconverter.net" },
-    { rel: "alternate", hreflang: "fr", href: "https://www.textconverter.net/fr" },
-    { rel: "alternate", hreflang: "de", href: "https://www.textconverter.net/de" },
-    { rel: "alternate", hreflang: "es", href: "https://www.textconverter.net/es" },
-    { rel: "alternate", hreflang: "zh-CN", href: "https://www.textconverter.net/zh-CN" },
+      { rel: "alternate", hreflang: "x-default", href: "https://www.textconverter.net" },
+      { rel: "alternate", hreflang: "en", href: "https://www.textconverter.net" },
+      { rel: "alternate", hreflang: "fr", href: "https://www.textconverter.net/fr" },
+      { rel: "alternate", hreflang: "de", href: "https://www.textconverter.net/de" },
+      { rel: "alternate", hreflang: "es", href: "https://www.textconverter.net/es" },
+      { rel: "alternate", hreflang: "zh-CN", href: "https://www.textconverter.net/zh-CN" },
     ],
     script: [{
       type: "application/ld+json", innerHTML: JSON.stringify([

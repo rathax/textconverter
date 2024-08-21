@@ -2,7 +2,6 @@
   <div class="flex min-h-screen flex-col">
     <header class="">
       <div class="px-16 max-w-[1728px] m-auto h-16">
-        <div> </div>
         <div class="flex divide-x justify-between sm:justify-end py-3 items-center h-full font-semibold">
           <div class="px-3">
             <RouterLink to="/" rel="alternate" hreflang="en">EN</RouterLink>
@@ -25,10 +24,16 @@
         </div>
       </div>
     </header>
-    <div class="flex-grow">
-      <NuxtPage />
-
+    <div>
+      <div align="center" id="ad-slot" style="min-height: 280px;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7920782567845375" data-ad-slot="1375391614"
+          data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
     </div>
+    <main class="flex-1">
+
+      <NuxtPage />
+    </main>
     <footer class="p-10 m-0  mt-10 sm:px-20 bg-surface-card border-t border-surface-border text-center h3">
       <nuxt-link to="/about" class="my-3 block">
         About
@@ -43,7 +48,6 @@
         GitHub
       </a>
     </footer>
-
   </div>
 </template>
 
@@ -52,25 +56,36 @@ import { computed, watch } from "vue";
 const route = useRoute()
 const routepath = computed(() => "https://www.textconverter.net" + (route?.path === '/' ? "" : route?.path) || "")
 
-if(import.meta.browser	) {
+if (import.meta.browser) {
   navigator.serviceWorker.getRegistrations().then(registrations => {
     for (const registration of registrations) {
-        registration.unregister();
-    } 
-});
+      registration.unregister();
+    }
+  });
 }
 
 
 watch([routepath], () => {
   useHead({
-    script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7920782567845375", async: true, crossorigin: "anonymous"}],
+    script: [{ src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7920782567845375", async: true, crossorigin: "anonymous" }],
     link: [{ rel: "canonical", href: routepath }]
   })
 }, { immediate: true })
 
+
+if(window) {
+    // @ts-expect-error
+  (window.adsbygoogle = window.adsbygoogle || []).push({});
+}
+
 </script>
 
 <style>
+@media screen and (max-width: 960px) {
+  #ad-slot {
+    min-height: 345px;
+  }
+}
 .text-h3 {
   @apply mt-5 mb-3 text-xl font-bold
 }
