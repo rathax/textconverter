@@ -136,10 +136,10 @@ useSeoMeta({
   keywords: 'unicode text converter, text converter, unicode converter, fancy text converter, font translate, unicode text transformer, text transformer, qaz wtf"',
 })
 
-if(window) {
-    // @ts-expect-error
-  (window.adsbygoogle = window.adsbygoogle || []).push({});
-}
+// if(window) {
+//     // @ts-expect-error
+//   (window.adsbygoogle = window.adsbygoogle || []).push({});
+// }
 
 
 watch([locale], () => {

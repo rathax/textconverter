@@ -52,7 +52,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, watch } from "vue";
+import { computed, watch, onMounted, nextTick } from "vue";
 const route = useRoute()
 const routepath = computed(() => "https://www.textconverter.net" + (route?.path === '/' ? "" : route?.path) || "")
 
@@ -72,11 +72,20 @@ watch([routepath], () => {
   })
 }, { immediate: true })
 
+onMounted(() => {
+  nextTick().then(() => {
+    try {
+         // @ts-expect-error
+         (window.adsbygoogle = window.adsbygoogle || []).push({});
+          // @ts-expect-error
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (error) {
+      console.error(error)
+    }
 
-if(window) {
-    // @ts-expect-error
-  (window.adsbygoogle = window.adsbygoogle || []).push({});
-}
+  })
+})
+
 
 </script>
 
@@ -86,6 +95,7 @@ if(window) {
     min-height: 345px;
   }
 }
+
 .text-h3 {
   @apply mt-5 mb-3 text-xl font-bold
 }
