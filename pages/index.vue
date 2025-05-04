@@ -84,9 +84,6 @@ const input = ref(defaultInput)
 
 onMounted(() => {
   if (router.currentRoute.value.query.text && typeof router.currentRoute.value.query.text === "string") {
-  console.log(input.value = router.currentRoute.value.query.text)
-  console.log(input.value)
-
   input.value = router.currentRoute.value.query.text
 }
 })
@@ -102,7 +99,6 @@ const helper = (string: string[], table: Record<string, string>) => {
 }
 
 const data = computed(() => {
-  console.log(input.value)
   const string = input.value.split("")
 
 
