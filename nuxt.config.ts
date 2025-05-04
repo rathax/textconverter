@@ -5,6 +5,11 @@ import type { I18nHeadOptions } from "@nuxtjs/i18n";
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["@/assets/index.css"],
+  nitro: {
+    prerender: {
+      failOnError: false
+    }
+  },
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "nuxt-svgo"],
   i18n: {
     locales: [

@@ -64,12 +64,6 @@ if (import.meta.browser) {
   });
 }
 
-if (import.meta.server) {
-  const event = useRequestEvent()
-  if(event) {
-    setResponseStatus(event, 404)
-  }
-}
 
 
 watch([routepath], () => {

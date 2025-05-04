@@ -71,7 +71,7 @@
   
 <script setup lang="ts">
 import FontRow from "@/components/FontRow.vue"
-import { computed, watch, ref } from 'vue';
+import { computed, watch, ref, onMounted } from 'vue';
 import * as db from "@/assets/db"
 import { useI18n } from "vue-i18n";
 import { useRouter, } from "vue-router"
@@ -80,10 +80,16 @@ const { t, locale } = useI18n();
 
 const defaultInput = "Unicode Text Converter " + new Date().getFullYear() + " !"
 const input = ref(defaultInput)
-if (router.currentRoute.value.query.text && typeof router.currentRoute.value.query.text === "string") {
+
+
+onMounted(() => {
+  if (router.currentRoute.value.query.text && typeof router.currentRoute.value.query.text === "string") {
+  console.log(input.value = router.currentRoute.value.query.text)
+  console.log(input.value)
+
   input.value = router.currentRoute.value.query.text
 }
-
+})
 
 watch(input, (val) => {
   router.replace({ ...router.currentRoute.value, query: { text: val } });
@@ -96,6 +102,7 @@ const helper = (string: string[], table: Record<string, string>) => {
 }
 
 const data = computed(() => {
+  console.log(input.value)
   const string = input.value.split("")
 
 
